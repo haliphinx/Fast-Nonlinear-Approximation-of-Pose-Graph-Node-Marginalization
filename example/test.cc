@@ -5,7 +5,6 @@
 
 #include<opencv2/core/core.hpp>
 
-#include<Nam.h>
 #include<Topology.h>
 #include<Node.h>
 #define PI 3.1415926535
@@ -37,10 +36,9 @@ int main(int argc, char **argv){
 	cTop->AddNode(n1);
 	cTop->AddNode(n2);
 
-	Nam mnam(cTop);
 
 	tTop->AddEdge(e12);
-	mnam.MarginalizeNode(n0, tTop);
+	cTop->MarginalizeNode(n0, tTop);
 	
 	return 0;
 }

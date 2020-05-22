@@ -4,7 +4,6 @@ namespace FNA{
 
 	Edge::Edge(Node* firstNode, Node* secondNode){
 		endpoints = std::make_pair(firstNode,secondNode);
-		// mean = -firstNode->GetPose()+secondNode->GetPose();
 	}
 
 

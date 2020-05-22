@@ -3,7 +3,6 @@
 
 CMakeFiles/test.dir/example/test.cc.o
  ../include/Edge.h
- ../include/Nam.h
  ../include/Node.h
  ../include/Topology.h
  /home/xhu/Code/FNA_Node_Marginalization/example/test.cc

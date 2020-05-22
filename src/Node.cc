@@ -2,6 +2,7 @@
 
 namespace FNA{
 	Node::Node(int cIdx, cv::Mat cPose, cv::Mat cov):idx(cIdx), covariance(cov){
+		//Convert the pose into SE(2)
 		float x = cPose.at<float>(0,0);
 		float y = cPose.at<float>(1,0);
 		float angle = cPose.at<float>(2,0);
@@ -15,7 +16,7 @@ namespace FNA{
 	cv::Mat Node::GetCov(){
 		return covariance.clone();
 	}
-	
+
 	void Node::SetPose(cv::Mat &newPose){
 		newPose.copyTo(pose);
 	}

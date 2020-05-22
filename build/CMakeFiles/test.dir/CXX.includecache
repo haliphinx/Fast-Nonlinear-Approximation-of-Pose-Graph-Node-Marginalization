@@ -12,16 +12,6 @@ opencv2/core/core.hpp
 Node.h
 ../include/Node.h
 
-../include/Nam.h
-opencv2/core/core.hpp
--
-Node.h
-../include/Node.h
-Edge.h
-../include/Edge.h
-Topology.h
-../include/Topology.h
-
 ../include/Node.h
 opencv2/core/core.hpp
 -
@@ -52,8 +42,6 @@ fstream
 chrono
 -
 opencv2/core/core.hpp
--
-Nam.h
 -
 Topology.h
 -

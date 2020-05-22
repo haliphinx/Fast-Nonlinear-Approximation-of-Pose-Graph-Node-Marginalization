@@ -22,13 +22,23 @@ namespace FNA{
 		std::vector<Node*> GetAllNodes();
 		std::vector<Edge*> GetAllEdges();
 		float GetScaleFactor(Edge* gEdge);
+		void SetScaleFactor(Edge* gEdge, float nScale);
+		
+		//Calculate the marginal covariance
 		cv::Mat CalculateMarginalCov(Edge* cEdge);
 	private:
-		void UpdateScaleFactor();
+		//Calculate the scale factor beta for each edge
+		void UpdateScaleFactor(Topology* tTop);
+
+		//Convert vector to mat for UpdateScaleFactor function
+		void vector2mat(std::vector<std::vector<int>> vec, cv::Mat& vMat);
+
+		//Count the number of spinning tree following the Kirchoff theorem
+		int CalSpinningTreeNum(std::vector<std::vector<int>> dVec, std::vector<std::vector<int>> aVec);
 		std::unordered_set<Node*> nStore;
 		std::unordered_set<Edge*> eStore;
 		std::unordered_map<Edge*, float> scaleMap;
-		
+
 	};
 }
 
