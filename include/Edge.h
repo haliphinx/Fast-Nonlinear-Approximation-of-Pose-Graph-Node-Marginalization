@@ -2,6 +2,7 @@
 #define EDGE_H
 
 #include<opencv2/core/core.hpp>
+#include<iostream>
 #include"Node.h"
 
 namespace FNA{
@@ -24,6 +25,8 @@ namespace FNA{
 
 		//Return the pointers of the endpoints of the edge
 		std::pair<Node*,Node*> GetPoints();
+
+		cv::Mat GetADMat();
 	private:
 		//Calculate the adjoint map matrix 
 		void CalADMatrix();

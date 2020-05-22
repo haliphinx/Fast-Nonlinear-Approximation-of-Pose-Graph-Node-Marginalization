@@ -21,9 +21,9 @@ namespace FNA{
 		for(auto eg:tEdges){
 			eg->SetMean((eg->GetPoints().first->GetPose().inv())*(eg->GetPoints().second->GetPose()));
 			// cv::Mat adMatrix = cv::determinant(eg->GetMean().inv())*(eg->GetMean());	
-			cv::Mat adMatrix = (cv::Mat_<float>(3,3)<<1,0,0,0,2,0,0,0,1);
+			cv::Mat adMatrix = eg->GetADMat();
 			cv::Mat mCov = adMatrix*(eg->GetPoints().first->GetCov())*(adMatrix.t())+(eg->GetPoints().second->GetCov());
-			// cout<<mCov<<endl;
+			cout<<mCov<<endl;
 		}
 		
 	}
