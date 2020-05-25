@@ -16,7 +16,7 @@ namespace FNA{
 		Topology();
 		void AddEdge(Edge* newEdge);
 		void AddNode(Node* newNode);
-		void MarginalizeNode(Node* mNode, Topology* tTop);
+		void MarginalizeNode(Node* mNode);
 		void DeleteEdge(Edge* newEdge);
 		void DeleteNode(Node* newNode);
 		std::vector<Node*> GetAllNodes();
@@ -28,7 +28,7 @@ namespace FNA{
 		cv::Mat CalculateMarginalCov(Edge* cEdge);
 	private:
 		//Calculate the scale factor beta for each edge
-		void UpdateScaleFactor(Topology* tTop);
+		void UpdateScaleFactor();
 
 		//Convert vector to mat for UpdateScaleFactor function
 		void vector2mat(std::vector<std::vector<int>> vec, cv::Mat& vMat);

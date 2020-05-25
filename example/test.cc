@@ -27,7 +27,6 @@ int main(int argc, char **argv){
 	Edge* e12 = new Edge(n1,n2);
 
 	Topology* cTop = new Topology();
-	Topology* tTop = new Topology();
 
 	// cTop->AddEdge(e01);
 	// cTop->AddEdge(e02);
@@ -36,9 +35,8 @@ int main(int argc, char **argv){
 	cTop->AddNode(n1);
 	cTop->AddNode(n2);
 
-
-	tTop->AddEdge(e12);
-	cTop->MarginalizeNode(n0, tTop);
+	cTop->AddEdge(e12);
+	cTop->MarginalizeNode(n0);
 	
 	return 0;
 }

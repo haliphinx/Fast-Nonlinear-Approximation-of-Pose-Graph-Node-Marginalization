@@ -5,7 +5,6 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/xhu/Code/FNA_Node_Marginalization/src/Edge.cc" "/home/xhu/Code/FNA_Node_Marginalization/build/CMakeFiles/FNA.dir/src/Edge.cc.o"
-  "/home/xhu/Code/FNA_Node_Marginalization/src/Nam.cc" "/home/xhu/Code/FNA_Node_Marginalization/build/CMakeFiles/FNA.dir/src/Nam.cc.o"
   "/home/xhu/Code/FNA_Node_Marginalization/src/Node.cc" "/home/xhu/Code/FNA_Node_Marginalization/build/CMakeFiles/FNA.dir/src/Node.cc.o"
   "/home/xhu/Code/FNA_Node_Marginalization/src/Topology.cc" "/home/xhu/Code/FNA_Node_Marginalization/build/CMakeFiles/FNA.dir/src/Topology.cc.o"
   )

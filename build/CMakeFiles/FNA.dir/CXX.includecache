@@ -14,16 +14,6 @@ iostream
 Node.h
 ../include/Node.h
 
-../include/Nam.h
-opencv2/core/core.hpp
--
-Node.h
-../include/Node.h
-Edge.h
-../include/Edge.h
-Topology.h
-../include/Topology.h
-
 ../include/Node.h
 opencv2/core/core.hpp
 -
@@ -47,10 +37,6 @@ Edge.h
 /home/xhu/Code/FNA_Node_Marginalization/src/Edge.cc
 Edge.h
 /home/xhu/Code/FNA_Node_Marginalization/src/Edge.h
-
-/home/xhu/Code/FNA_Node_Marginalization/src/Nam.cc
-Nam.h
-/home/xhu/Code/FNA_Node_Marginalization/src/Nam.h
 
 /home/xhu/Code/FNA_Node_Marginalization/src/Node.cc
 Node.h

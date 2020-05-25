@@ -190,33 +190,6 @@ src/Edge.cc.s:
 	$(MAKE) -f CMakeFiles/FNA.dir/build.make CMakeFiles/FNA.dir/src/Edge.cc.s
 .PHONY : src/Edge.cc.s
 
-src/Nam.o: src/Nam.cc.o
-
-.PHONY : src/Nam.o
-
-# target to build an object file
-src/Nam.cc.o:
-	$(MAKE) -f CMakeFiles/FNA.dir/build.make CMakeFiles/FNA.dir/src/Nam.cc.o
-.PHONY : src/Nam.cc.o
-
-src/Nam.i: src/Nam.cc.i
-
-.PHONY : src/Nam.i
-
-# target to preprocess a source file
-src/Nam.cc.i:
-	$(MAKE) -f CMakeFiles/FNA.dir/build.make CMakeFiles/FNA.dir/src/Nam.cc.i
-.PHONY : src/Nam.cc.i
-
-src/Nam.s: src/Nam.cc.s
-
-.PHONY : src/Nam.s
-
-# target to generate assembly for a file
-src/Nam.cc.s:
-	$(MAKE) -f CMakeFiles/FNA.dir/build.make CMakeFiles/FNA.dir/src/Nam.cc.s
-.PHONY : src/Nam.cc.s
-
 src/Node.o: src/Node.cc.o
 
 .PHONY : src/Node.o
@@ -287,9 +260,6 @@ help:
 	@echo "... src/Edge.o"
 	@echo "... src/Edge.i"
 	@echo "... src/Edge.s"
-	@echo "... src/Nam.o"
-	@echo "... src/Nam.i"
-	@echo "... src/Nam.s"
 	@echo "... src/Node.o"
 	@echo "... src/Node.i"
 	@echo "... src/Node.s"

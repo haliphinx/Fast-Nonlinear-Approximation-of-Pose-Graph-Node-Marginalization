@@ -1,6 +1,5 @@
 file(REMOVE_RECURSE
   "CMakeFiles/FNA.dir/src/Edge.cc.o"
-  "CMakeFiles/FNA.dir/src/Nam.cc.o"
   "CMakeFiles/FNA.dir/src/Node.cc.o"
   "CMakeFiles/FNA.dir/src/Topology.cc.o"
   "../lib/libFNA.pdb"

@@ -15,9 +15,9 @@ namespace FNA{
 		nStore.insert(newNode);
 	}
 
-	void Topology::MarginalizeNode(Node* mNode, Topology* tTop){
-		UpdateScaleFactor(tTop);
-		vector<Edge*> tEdges = tTop->GetAllEdges();
+	void Topology::MarginalizeNode(Node* mNode){
+		UpdateScaleFactor();
+		vector<Edge*> tEdges = GetAllEdges();
 		for(auto eg:tEdges){
 			eg->SetMean((eg->GetPoints().first->GetPose().inv())*(eg->GetPoints().second->GetPose()));
 			// cv::Mat adMatrix = cv::determinant(eg->GetMean().inv())*(eg->GetMean());	
@@ -28,13 +28,13 @@ namespace FNA{
 		
 	}
 
-	void Topology::UpdateScaleFactor(Topology* tTop){
+	void Topology::UpdateScaleFactor(){
 
 		//construct the degree matrix and the adjacency matrix
 		vector<vector<int>> degVec (nStore.size()-1, vector<int>(nStore.size()-1,0));
 		vector<vector<int>> adjVec (nStore.size()-1, vector<int>(nStore.size()-1,0));
 		
-		for(auto eg:tTop->GetAllEdges()){
+		for(auto eg:GetAllEdges()){
 			int fIdx = eg->GetPoints().first->GetIdx()-1;
 			int sIdx = eg->GetPoints().second->GetIdx()-1;
 			degVec[fIdx][fIdx]++;
@@ -47,7 +47,7 @@ namespace FNA{
 		int totalTree = CalSpinningTreeNum(degVec, adjVec);
 		
 
-		for(auto eg:tTop->GetAllEdges()){
+		for(auto eg:GetAllEdges()){
 			int fIdx = eg->GetPoints().first->GetIdx()-1;
 			int sIdx = eg->GetPoints().second->GetIdx()-1;
 			degVec[fIdx][fIdx]--;
@@ -57,7 +57,7 @@ namespace FNA{
 
 			//The number of spinning trees without the edge
 			int exceptEg = CalSpinningTreeNum(degVec, adjVec);
-			tTop->SetScaleFactor(eg, totalTree/(totalTree-exceptEg));
+			SetScaleFactor(eg, totalTree/(totalTree-exceptEg));
 			degVec[fIdx][fIdx]++;
 			degVec[sIdx][sIdx]++;
 			adjVec[fIdx][sIdx] = 1;
